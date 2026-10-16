@@ -1,0 +1,49 @@
+name: cotador-dados
+
+services:
+  db:
+    image: postgres:16-alpine
+    env_file:
+      - .env
+      - docker/compose.env
+    ports:
+      - "${POSTGRES_PUBLISHED_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  backend:
+    build: ./backend
+    env_file:
+      - .env
+      - docker/compose.env
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - media:/app/media
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 40s
+
+  frontend:
+    build: ./frontend
+    env_file:
+      - .env
+      - docker/compose.env
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+
+volumes:
+  pgdata:
+  media:

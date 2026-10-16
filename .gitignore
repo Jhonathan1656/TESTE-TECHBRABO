@@ -1,0 +1,37 @@
+# Environment and secrets
+.env
+*.env
+!.env.example
+# Container topology, not a secret: compose needs it to start.
+!docker/compose.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+backend/media/
+backend/staticfiles/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/coverage/
+*.tsbuildinfo
+
+# Generated demo material
+samples/generated/
+
+# Demo videos are shared separately; too large for the repository
+*.mp4
+*.webm
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
