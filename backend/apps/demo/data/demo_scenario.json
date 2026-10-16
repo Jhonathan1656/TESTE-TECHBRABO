@@ -1,0 +1,641 @@
+{
+  "notice": "Dados fictícios para demonstração: operadoras, planos, registros ANS e valores não correspondem a entidades reais.",
+  "price_curve": [
+    "1.00",
+    "1.19",
+    "1.39",
+    "1.51",
+    "1.63",
+    "1.87",
+    "2.40",
+    "3.11",
+    "3.98",
+    "5.70"
+  ],
+  "band_labels": [
+    "00 a 18 anos",
+    "19 a 23 anos",
+    "24 a 28 anos",
+    "29 a 33 anos",
+    "34 a 38 anos",
+    "39 a 43 anos",
+    "44 a 48 anos",
+    "49 a 53 anos",
+    "54 a 58 anos",
+    "59 anos ou mais"
+  ],
+  "document_labels": {
+    "region": "Região",
+    "effective_from": "Vigência",
+    "band_header": "Faixa etária",
+    "plan_header": "Plano",
+    "accommodation_header": "Acomodação",
+    "sheet_title": "Tabela"
+  },
+  "ans_note_factor": "1.05",
+  "ans_vocabulary": {
+    "operator_size": "Médio",
+    "segmentation": "Ambulatorial + Hospitalar com obstetrícia",
+    "segmentation_group": "Ambulatorial + Hospitalar",
+    "obstetrics": "Com Obstetrícia",
+    "coverage": "Médico-hospitalar",
+    "financing": "Preestabelecido",
+    "free_choice": "Ausente",
+    "active_status": "Ativo",
+    "abrangency": "REGIONALIZADA",
+    "moderating_factor": {
+      "true": "Coparticipação",
+      "false": "Ausente"
+    },
+    "accommodation": {
+      "ward": "Coletiva",
+      "private_room": "Individual",
+      "not_applicable": "Não se aplica"
+    },
+    "coverage_area": {
+      "municipal": "Municipal",
+      "municipalities_group": "Grupo de municípios",
+      "state": "Estadual",
+      "states_group": "Grupo de estados",
+      "national": "Nacional"
+    }
+  },
+  "users": [
+    {
+      "username": "analista",
+      "first_name": "Camila",
+      "last_name": "Duarte",
+      "role": "analyst"
+    },
+    {
+      "username": "revisor",
+      "first_name": "Rafael",
+      "last_name": "Moreira",
+      "role": "reviewer"
+    }
+  ],
+  "operators": [
+    {
+      "key": "vida_plena",
+      "name": "Vida Plena Saúde",
+      "corporate_name": "VIDA PLENA SAUDE LTDA",
+      "ans_registration": "900011",
+      "cnpj": "00000000000191",
+      "modality": "medical_group",
+      "ans_modality": "Medicina de Grupo",
+      "state": "SP",
+      "access_level": "automated",
+      "sources": [
+        {
+          "key": "portal",
+          "name": "Portal do Corretor — Vida Plena",
+          "channel": "operator_portal",
+          "trust_level": 3,
+          "expected_update_days": 30,
+          "tolerance_days": 7,
+          "contact": "Coletor automático com credencial da equipe de dados",
+          "auto_approve": false
+        }
+      ],
+      "plans": [
+        {
+          "key": "essencial_enf",
+          "name": "Essencial Enfermaria",
+          "product_line": "Essencial",
+          "ans_plan_id": 99010124,
+          "ans_product_code": "990101241",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "ward",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": true,
+          "base_price": "212.40"
+        },
+        {
+          "key": "essencial_apto",
+          "name": "Essencial Apartamento",
+          "product_line": "Essencial",
+          "ans_plan_id": 99010224,
+          "ans_product_code": "990102241",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "private_room",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": true,
+          "base_price": "254.90"
+        },
+        {
+          "key": "superior_enf",
+          "name": "Superior Enfermaria",
+          "product_line": "Superior",
+          "ans_plan_id": 99010324,
+          "ans_product_code": "990103241",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "ward",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "298.70"
+        },
+        {
+          "key": "superior_apto",
+          "name": "Superior Apartamento",
+          "product_line": "Superior",
+          "ans_plan_id": 99010424,
+          "ans_product_code": "990104241",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "private_room",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "356.20"
+        },
+        {
+          "key": "premium_apto",
+          "name": "Premium Apartamento",
+          "product_line": "Premium",
+          "ans_plan_id": 99010524,
+          "ans_product_code": "990105241",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "private_room",
+          "coverage_area": "states_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "512.80"
+        }
+      ]
+    },
+    {
+      "key": "horizonte",
+      "name": "Horizonte Saúde Seguros",
+      "corporate_name": "HORIZONTE SEGUROS SAUDE S.A.",
+      "ans_registration": "900022",
+      "cnpj": "00000000000272",
+      "modality": "insurer",
+      "ans_modality": "Seguradora Especializada em Saúde",
+      "state": "RJ",
+      "access_level": "manual_channel",
+      "sources": [
+        {
+          "key": "email",
+          "name": "E-mail comercial — Horizonte",
+          "channel": "email_inbox",
+          "trust_level": 3,
+          "expected_update_days": 30,
+          "tolerance_days": 10,
+          "contact": "Gerência comercial (tabelas@horizonte.example)",
+          "auto_approve": true
+        }
+      ],
+      "plans": [
+        {
+          "key": "h100_enf",
+          "name": "Horizonte 100 Enfermaria",
+          "product_line": "Horizonte 100",
+          "ans_plan_id": 99020123,
+          "ans_product_code": "990201231",
+          "contract_type": "individual",
+          "contract_label": "Individual ou familiar",
+          "accommodation": "ward",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "189.50"
+        },
+        {
+          "key": "h200_apto",
+          "name": "Horizonte 200 Apartamento",
+          "product_line": "Horizonte 200",
+          "ans_plan_id": 99020223,
+          "ans_product_code": "990202231",
+          "contract_type": "individual",
+          "contract_label": "Individual ou familiar",
+          "accommodation": "private_room",
+          "coverage_area": "states_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "241.30"
+        },
+        {
+          "key": "h300_apto",
+          "name": "Horizonte 300 Apartamento",
+          "product_line": "Horizonte 300",
+          "ans_plan_id": 99020323,
+          "ans_product_code": "990203231",
+          "contract_type": "individual",
+          "contract_label": "Individual ou familiar",
+          "accommodation": "private_room",
+          "coverage_area": "national",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "327.90"
+        }
+      ]
+    },
+    {
+      "key": "coop_litoral",
+      "name": "CoopSaúde Litoral",
+      "corporate_name": "COOPSAUDE LITORAL COOPERATIVA MEDICA",
+      "ans_registration": "900033",
+      "cnpj": "00000000000353",
+      "modality": "medical_cooperative",
+      "ans_modality": "Cooperativa Médica",
+      "state": "SP",
+      "access_level": "no_access",
+      "sources": [
+        {
+          "key": "brokers",
+          "name": "Material enviado por corretores — CoopSaúde",
+          "channel": "broker",
+          "trust_level": 1,
+          "expected_update_days": 30,
+          "tolerance_days": 15,
+          "contact": "Sem canal oficial: depende de corretores parceiros",
+          "auto_approve": false
+        }
+      ],
+      "plans": [
+        {
+          "key": "litoral_ess_enf",
+          "name": "Litoral Essencial Enfermaria",
+          "product_line": "Litoral Essencial",
+          "ans_plan_id": 99030122,
+          "ans_product_code": "990301221",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "ward",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "176.40"
+        },
+        {
+          "key": "litoral_ess_apto",
+          "name": "Litoral Essencial Apartamento",
+          "product_line": "Litoral Essencial",
+          "ans_plan_id": 99030222,
+          "ans_product_code": "990302221",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "private_room",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "214.80"
+        },
+        {
+          "key": "litoral_basico_enf",
+          "name": "Litoral Básico Enfermaria",
+          "product_line": "Litoral Básico",
+          "ans_plan_id": 99030322,
+          "ans_product_code": "990303221",
+          "contract_type": "sme",
+          "contract_label": "Coletivo empresarial",
+          "accommodation": "ward",
+          "coverage_area": "municipalities_group",
+          "segmentation": "outpatient_hospital_with_obstetrics",
+          "has_coparticipation": false,
+          "base_price": "149.90",
+          "ans_status": "Suspenso",
+          "ans_status_days_ago": 45
+        }
+      ]
+    }
+  ],
+  "source_history": [
+    {
+      "operator": "vida_plena",
+      "source": "portal",
+      "kind": "collector_unchanged",
+      "every_days": 7
+    },
+    {
+      "operator": "vida_plena",
+      "source": "portal",
+      "kind": "failed",
+      "days_ago": 3,
+      "note": "Portal indisponível (HTTP 503)"
+    },
+    {
+      "operator": "vida_plena",
+      "source": "portal",
+      "kind": "unchanged",
+      "days_ago": 1
+    },
+    {
+      "operator": "horizonte",
+      "source": "email",
+      "kind": "unchanged",
+      "days_ago": 20,
+      "user": "analista",
+      "note": "Gerência comercial confirmou por e-mail que a tabela segue vigente."
+    }
+  ],
+  "deliveries": [
+    {
+      "key": "vida_plena_history",
+      "stage": "history",
+      "operator": "vida_plena",
+      "source": "portal",
+      "layout": "pdf_grid",
+      "effective_month_offset": -5,
+      "received_days_before_effective": 9,
+      "review": {
+        "user": "revisor",
+        "days_after_receipt": 1,
+        "note": "Primeira carga conferida contra o PDF do portal."
+      },
+      "adjustment": "1",
+      "filename": "vida-plena_tabela-pme-sp_{effective:%Y-%m}.pdf",
+      "heading": "VIDA PLENA SAÚDE — Registro ANS nº 900011",
+      "title": "Tabela de Preços — PME de 2 a 29 vidas — Coletivo Empresarial",
+      "region": "São Paulo – Capital e Grande SP",
+      "money_style": "brl",
+      "column_groups": [
+        {
+          "title": "Essencial",
+          "columns": [
+            {
+              "plan": "essencial_enf",
+              "label": "Enfermaria"
+            },
+            {
+              "plan": "essencial_apto",
+              "label": "Apartamento"
+            }
+          ]
+        },
+        {
+          "title": "Superior",
+          "columns": [
+            {
+              "plan": "superior_enf",
+              "label": "Enfermaria"
+            },
+            {
+              "plan": "superior_apto",
+              "label": "Apartamento"
+            }
+          ]
+        },
+        {
+          "title": "Premium",
+          "columns": [
+            {
+              "plan": "premium_apto",
+              "label": "Apartamento"
+            }
+          ]
+        }
+      ],
+      "footer": [
+        "Linha Essencial com coparticipação de 30% em consultas e exames simples, limitada a R$ 60,00 por evento.",
+        "Valores mensais por beneficiário. Registros ANS: Essencial Enf. 990.101/24-1 · Essencial Apto. 990.102/24-1 · Superior Enf. 990.103/24-1 · Superior Apto. 990.104/24-1 · Premium Apto. 990.105/24-1.",
+        "Valores sujeitos às condições contratuais e às normas da ANS vigentes."
+      ]
+    },
+    {
+      "key": "horizonte_history",
+      "stage": "history",
+      "operator": "horizonte",
+      "source": "email",
+      "layout": "xlsx_rows",
+      "effective_month_offset": -7,
+      "received_days_before_effective": 5,
+      "adjustment": "1",
+      "filename": "Horizonte_Tabela_Individual_RJ_{effective:%m-%Y}.xlsx",
+      "heading": "HORIZONTE SAÚDE SEGUROS — Registro ANS nº 900022",
+      "title": "Tabela de vendas — Plano Individual/Familiar",
+      "region": "Rio de Janeiro – Capital",
+      "rows": [
+        {
+          "plan": "h100_enf",
+          "name": "Horizonte 100",
+          "accommodation": "Enfermaria"
+        },
+        {
+          "plan": "h200_apto",
+          "name": "Horizonte 200",
+          "accommodation": "Apartamento"
+        },
+        {
+          "plan": "h300_apto",
+          "name": "Horizonte 300",
+          "accommodation": "Apartamento"
+        }
+      ],
+      "footer": [
+        "Valores mensais por beneficiário, em reais.",
+        "Valores sujeitos às condições contratuais e às normas da ANS vigentes."
+      ]
+    },
+    {
+      "key": "coop_history",
+      "stage": "history",
+      "operator": "coop_litoral",
+      "source": "brokers",
+      "layout": "pdf_grid",
+      "effective_month_offset": -14,
+      "received_days_before_effective": 3,
+      "uploaded_by": "analista",
+      "review": {
+        "user": "revisor",
+        "days_after_receipt": 1,
+        "note": "Tabela recebida de corretor parceiro; conferida por telefone com a cooperativa."
+      },
+      "adjustment": "1",
+      "filename": "tabela_coopsaude_pme_{effective:%m%Y}.pdf",
+      "heading": "CoopSaúde Litoral — Registro ANS nº 900033",
+      "title": "Tabela PME — 2 a 29 vidas",
+      "region": "Baixada Santista",
+      "money_style": "plain",
+      "column_groups": [
+        {
+          "title": "",
+          "columns": [
+            {
+              "plan": "litoral_ess_enf",
+              "label": "Litoral Essencial Enfermaria"
+            },
+            {
+              "plan": "litoral_ess_apto",
+              "label": "Litoral Essencial Apartamento"
+            },
+            {
+              "plan": "litoral_basico_enf",
+              "label": "Litoral Básico Enfermaria"
+            }
+          ]
+        }
+      ],
+      "footer": [
+        "Valores em reais por beneficiário.",
+        "Valores sujeitos às condições contratuais e às normas da ANS vigentes."
+      ]
+    },
+    {
+      "key": "vida_plena_update",
+      "stage": "demo",
+      "operator": "vida_plena",
+      "source": "portal",
+      "channel": "operator_portal",
+      "layout": "pdf_grid",
+      "title_for_demo": "Portal Vida Plena: nova tabela PME",
+      "description_for_demo": "O coletor do portal encontrou uma tabela nova (reajuste de 9,8%). Ela traz dois erros de digitação: um sutil e um que viola a RN 63.",
+      "effective_month_offset": 1,
+      "adjustment": "1.098",
+      "filename": "vida-plena_tabela-pme-sp_{effective:%Y-%m}.pdf",
+      "heading": "VIDA PLENA SAÚDE — Registro ANS nº 900011",
+      "title": "Tabela de Preços — PME de 2 a 29 vidas — Coletivo Empresarial",
+      "region": "São Paulo – Capital e Grande SP",
+      "money_style": "brl",
+      "column_groups": [
+        {
+          "title": "Essencial",
+          "columns": [
+            {
+              "plan": "essencial_enf",
+              "label": "Enfermaria"
+            },
+            {
+              "plan": "essencial_apto",
+              "label": "Apartamento"
+            }
+          ]
+        },
+        {
+          "title": "Superior",
+          "columns": [
+            {
+              "plan": "superior_enf",
+              "label": "Enfermaria"
+            },
+            {
+              "plan": "superior_apto",
+              "label": "Apartamento"
+            }
+          ]
+        },
+        {
+          "title": "Premium",
+          "columns": [
+            {
+              "plan": "premium_apto",
+              "label": "Apto."
+            }
+          ]
+        }
+      ],
+      "typos": [
+        {
+          "plan": "superior_enf",
+          "band": 7,
+          "text": "R$ 878,13"
+        },
+        {
+          "plan": "premium_apto",
+          "band": 10,
+          "text": "R$ 3.902,40"
+        }
+      ],
+      "footer": [
+        "Linha Essencial com coparticipação de 30% em consultas e exames simples, limitada a R$ 60,00 por evento.",
+        "Valores mensais por beneficiário. Reajuste anual aplicado conforme contrato.",
+        "Valores sujeitos às condições contratuais e às normas da ANS vigentes."
+      ]
+    },
+    {
+      "key": "horizonte_update",
+      "stage": "demo",
+      "operator": "horizonte",
+      "source": "email",
+      "channel": "email_inbox",
+      "layout": "xlsx_rows",
+      "title_for_demo": "E-mail Horizonte: tabela Individual",
+      "description_for_demo": "Planilha recebida no e-mail comercial. A fonte tem aprovação automática, mas este arquivo traz erro de casa decimal, um nome de plano diferente do catálogo e um plano novo.",
+      "effective_month_offset": 2,
+      "adjustment": "1.084",
+      "filename": "Horizonte_Tabela_Individual_RJ_{effective:%m-%Y}.xlsx",
+      "heading": "HORIZONTE SAÚDE SEGUROS — Registro ANS nº 900022",
+      "title": "Tabela de vendas — Plano Individual/Familiar",
+      "region": "Rio de Janeiro – Capital",
+      "rows": [
+        {
+          "plan": "h100_enf",
+          "name": "Horizonte 100",
+          "accommodation": "Enfermaria"
+        },
+        {
+          "plan": "h200_apto",
+          "name": "Horizonte 200",
+          "accommodation": "Apartamento"
+        },
+        {
+          "plan": "h300_apto",
+          "name": "Horizonte 300",
+          "accommodation": "Apto Nacional"
+        },
+        {
+          "plan": null,
+          "name": "Horizonte 400",
+          "accommodation": "Apartamento",
+          "base_price": "402.10"
+        }
+      ],
+      "typos": [
+        {
+          "plan": "h200_apto",
+          "band": 9,
+          "value": "10410.40"
+        }
+      ],
+      "footer": [
+        "Valores mensais por beneficiário, em reais.",
+        "Lançamento: Horizonte 400 (cobertura nacional).",
+        "Valores sujeitos às condições contratuais e às normas da ANS vigentes."
+      ]
+    },
+    {
+      "key": "coop_notice",
+      "stage": "demo",
+      "operator": "coop_litoral",
+      "source": "brokers",
+      "channel": "broker",
+      "layout": "pdf_notice",
+      "title_for_demo": "Corretor: comunicado da CoopSaúde",
+      "description_for_demo": "Comunicado em texto corrido, sem tabela, enviado por um corretor. Sem chave de IA, o lote falha e vai para tratamento manual; com chave, a IA extrai e cada valor é conferido no texto.",
+      "effective_month_offset": 1,
+      "adjustment": "1.097",
+      "filename": "comunicado-coopsaude-novos-valores.pdf",
+      "heading": "CoopSaúde Litoral — Registro ANS nº 900033",
+      "title": "COMUNICADO AOS CORRETORES PARCEIROS",
+      "region": "Baixada Santista",
+      "intro": "Informamos que, a partir de {effective_from}, os valores dos planos PME (2 a 29 vidas) passam a ser os seguintes:",
+      "plans": [
+        "litoral_ess_enf",
+        "litoral_ess_apto",
+        "litoral_basico_enf"
+      ],
+      "footer": [
+        "Valores mensais por beneficiário. Demais condições contratuais permanecem inalteradas.",
+        "Valores sujeitos às condições contratuais e às normas da ANS vigentes."
+      ]
+    },
+    {
+      "key": "horizonte_resend",
+      "stage": "demo",
+      "operator": "horizonte",
+      "source": "email",
+      "channel": "email_inbox",
+      "layout": "resend",
+      "resend_of": "horizonte_history",
+      "title_for_demo": "E-mail Horizonte: reenvio da tabela vigente",
+      "description_for_demo": "A operadora reenviou a mesma planilha. O arquivo é reconhecido pelo hash, nada é reprocessado e a fonte é registrada como conferida."
+    }
+  ]
+}
