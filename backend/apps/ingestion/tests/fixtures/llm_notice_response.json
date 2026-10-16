@@ -1,0 +1,22 @@
+{
+  "effective_from": "01/12/2026",
+  "effective_until": "",
+  "region": "Baixada Santista",
+  "plans": [
+    {
+      "label": "Litoral Essencial Enfermaria",
+      "prices": [
+        {"age_band": 1, "source_text": "R$ 193,51"},
+        {"age_band": 2, "source_text": "R$ 230,28"},
+        {"age_band": 3, "source_text": "R$ 268,98"},
+        {"age_band": 4, "source_text": "R$ 292,20"},
+        {"age_band": 5, "source_text": "R$ 315,42"},
+        {"age_band": 6, "source_text": "R$ 361,86"},
+        {"age_band": 7, "source_text": "R$ 464,42"},
+        {"age_band": 8, "source_text": "R$ 601,82"},
+        {"age_band": 9, "source_text": "R$ 770,17"},
+        {"age_band": 10, "source_text": "R$ 1.103,01"}
+      ]
+    }
+  ]
+}
